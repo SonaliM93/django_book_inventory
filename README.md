@@ -9,7 +9,7 @@ Add a new book. (using google book api)
 Update inventory for an existing book.
 Remove from the inventory.
 
-git clone: 
+git clone: https://github.com/SonaliM93/django_book_inventory.git
 
 ** Install Requirements ** (using pip install)
 certifi==2019.6.16
