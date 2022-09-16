@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Register Yourself</title>
+    <style>
+      .container{
+        margin-top:150px;
+        border: 1px solid black;
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Enter your details to register:</h1>
+      <form method="post" novalidate>
+          {% csrf_token %}
+          {{ form.as_p }}
+          <input type="submit" value="Register"><br><br>
+      </form>
+    </div>
+  </body>
+</html>

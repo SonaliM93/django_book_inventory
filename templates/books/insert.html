@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta charset="UTF-8">
+  <title>Search Books</title>
+  <link rel="stylesheet" href="{% static "css/stores.css" %}">
+</head>
+
+<body>
+  <div class="container mt-2"></div>
+  <div class="row">
+    {% for id,title,img in d %}
+      <div class="col-md-3 col-sm-6 item">
+        <div class="card item-card card-block">
+          <h4 class="card-title text-right"><a href="{% url 'addbook' idd id title img %}"><i class="material-icons">add</i></a></h4>
+          <img src="{{ img }}" alt="Book Image">
+          <h5 class="item-card-title mt-3 mb-3">{{title}}</h5>
+       </div>
+      </div>
+    {% endfor %}
+  </div>
+</body>
+</html>
